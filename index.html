@@ -465,6 +465,12 @@
 								<td>Pass, Medium, Fail</td>
 								<td></td>
 							</tr>
+							<tr>
+								<td>Recommended</td>
+								<td><p><strong>ARIA Landmark Roles</strong></p><p>Assign landmark roles to the main content areas of your site to enable landmark based scanning for screen readers. All content on your site must be wrapped in at least one landmark role if you use these roles. Whie using ARIA roles is optional, if they are used they must be used correctly.</p><p>Appropriate usage of roles:</p><ul><li><code>role="banner"</code> == header</li><li><code>role="main"</code> == main content</li><li><code>role="complementary"</code> = sidebars</li><li><code>role="content-info"</code> = footer</li><li><code>role="search"</code> = search form</li><li><code>role="navigation"</code> = navigation menus</li></ul><p>If a particular role appears more than once on a page, you should provide an ARIA label for that role:</p><pre><code>&lt;nav role="navigation" aria-label="&lt;?php _e( 'Primary Navigation', 'textdomain' ); ?&gt;"&gt;<br>&lt;nav role="navigation" aria-label="&lt;?php _e( 'Secondary Navigation', 'textdomain' ); ?&gt;"&gt;</code></pre><p><strong>Zoomable Text</strong></p><p>If a user zooms with text-only zoom enabled or has changed the base font-size in their browser, the site should support this without breaking the theme by creating overlapping or hidden text.</p><p><strong>Removal of <code>title</code> attributes</strong></p><p>While the <code>title</code> attribute is occasionally of value, it is never of value if the attribute’s text is the same as the visible text. This is a common issue with post titles and permalinks. Remove extraneous <code>title</code> attributes.</p></td>
+								<td>Only recommendations</td>
+								<td></td>
+							</tr>
 						</tbody>
 					</table>
 
