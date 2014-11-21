@@ -392,7 +392,7 @@
 			<header>
 				<div class="grid grid-pad">
 					<div class="col-full">
-						<h1 class="title center">Accessibility testing</h1>
+						<h1 class="title center">Accessibility-Ready Testing</h1>
 					</div>
 				</div>
 			</header>
@@ -412,68 +412,93 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>Images</td>
-								<td>All decorative images&nbsp;<strong>MUST</strong>&nbsp;be included using CSS. Where theme authors add images to template markup, authors&nbsp;<strong>MUST</strong>incorporate an appropriately used&nbsp;<code>alt</code>&nbsp;attribute or the means to provide one. During the audit,&nbsp;<a href="http://dev.w3.org/html5/alt-techniques/#tree" title="http://dev.w3.org/html5/alt-techniques/#tree">a simple&nbsp;<code>alt</code>&nbsp;text decision tree</a>&nbsp;is used to check whether images are using the alt attribute appropriately</td>
-								<td>Pass, Medium, Fail</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>Media</td>
-								<td>Media resources&nbsp;<strong>must NOT</strong>&nbsp;auto start or change without user action as a default configuration. This includes resources such as audio, video, or image/content sliders and carousels.</td>
-								<td>Pass, Medium, Fail</td>
-								<td></td>
-							</tr>
-							<tr>
 								<td>Headings</td>
-								<td><p>Theme templates should use a reasonable HTML heading structure &mdash; including the use of heading elements for page sub-sections. Heading markup&nbsp;<strong>must NOT</strong>&nbsp;be used for presentational purposes. Heading elements for structure&nbsp;<strong>MAY</strong>&nbsp;be positioned off-screen as long as this is not at the expense of providing good, visual, structure.</p><p>Specifically, sub-sections defined by your theme&nbsp;<strong>MUST</strong>&nbsp;use heading elements. This includes wrapping your post title in a heading when used in an article context and wrapping widget titles in headings.</p></td>
-								<td>Pass, Medium, Fail</td>
+								<td><p>Theme templates should use a reasonable HTML heading structure — including the use of heading elements for page sub-sections. Heading markup must NOT be used for presentational purposes. Heading elements for structure MAY be positioned off-screen as long as this is not at the expense of providing good, visual, structure.</p><p>Specifically, sub-sections defined by your theme MUST use heading elements. This includes wrapping your post title in a heading when used in an article context and wrapping widget titles in headings.</p><p>See <a href="http://webaim.org/techniques/semanticstructure/">Semantic Structure from WebAIM</a> or <a href="https://www.joedolson.com/2014/11/headings-hierarchy-problem/">The Headings Hierarchy Challenge</a> for more information about heading structure.</p></td>
+								<td>Pass, Fail</td>
 								<td></td>
 							</tr>
 							<tr>
-								<td>Link text</td>
-								<td><p>Links&nbsp;<strong>MUST</strong>&nbsp;avoid repetitive non-contextual text strings such as ‘read more…’ and should also also make sense when taken out of context. Bare urls <strong>must NOT</strong> be used as links. Context-specific text&nbsp;<strong>MAY</strong>&nbsp;be positioned off-screen.</p><p>The core-defined ‘read more’ links fall under this guideline. You can use filters to replace these links. The post title should generally be used in addition to the normal directive text.</p></td>
-								<td>Pass, Medium, Fail</td>
+								<td>Link Text</td>
+								<td><p>Links MUST avoid repetitive non-contextual text strings such as ‘read more…’ and should also also make sense when taken out of context. Bare urls must NOT be used as links. Context-specific text MAY be positioned off-screen.</p><p>The core-defined ‘read more’ links fall under this guideline. You can use filters to replace these links. The post title should generally be used in addition to the normal directive text.</p></td>
+								<td>Pass, Fail</td>
 								<td></td>
 							</tr>
 							<tr>
-								<td>Keyboard navigation</td>
-								<td><p>Theme authors&nbsp;<strong>MUST</strong>&nbsp;provide visual keyboard focus highlighting in navigation menus and for form fields, submit buttons and text links. Navigation by keyboard should also be intuitive and effective.</p><p>A common issue in navigation menus is with drop down menus that use a display:none/display:inline hide/reveal paradigm.&nbsp;<code>display:none</code>&nbsp;removes the concealed object from screen reader’s reading, and should not be used.</p></td>
-								<td>Pass, Medium, Fail</td>
+								<td>Controls</td>
+								<td><p>All theme features that behave as buttons or links must use <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, or <code>&lt;a&gt;</code> elements, to ensure native keyboard accessibility and interaction with screen reader accessibility APIs.</p><p>All controls must also have machine-readable text to indicate the nature of the control.</p><p>See <a href="http://www.karlgroves.com/2013/05/14/links-are-not-buttons-neither-are-divs-and-spans/">Links are not buttons; neither are <code>div</code>s and <code>span</code>s</a> for detailed information.</p></td>
+								<td>Pass, Fail</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Keyboard Navigation</td>
+								<td><p>Theme authors MUST provide visual keyboard focus highlighting in navigation menus and for form fields, submit buttons and text links. Navigation by keyboard should also be intuitive and effective.</p></td>
+								<td>Pass, Fail</td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>Contrasts</td>
+								<td><p>Theme authors MUST ensure that all background/foreground color contrasts for plain content text are within the level AA contrast ratio (4.5:1) specified in the Web Content Accessibility Guidelines (WCAG) 2.0 for color luminosity.</p><p>Background/foreground color contrast also applies to change of state (:focus or :hover) if there is no additional indicator of :focus or :hover, such as a text decoration change.</p><p>The default settings will be the only color scheme checked. If a theme offers multiple color schemes, only the default scheme is required to pass these guidelines. Alternative themes should be clearly labeled if they do not meet accessibility guidelines.</p></td>
+								<td>Pass, Fail</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Skip Links</td>
 								<td><p>Theme authors&nbsp;<strong>MUST</strong>&nbsp;ensure that all background/foreground color contrasts for plain content text are within the level AA contrast ratio (4.5:1) specified in the Web Content Accessibility Guidelines (WCAG) 2.0 for color luminosity.</p><p>Unless a clearly labelled accessible color scheme is available within the theme, the default settings will be the only color scheme checked. If a theme offers multiple color schemes, only one scheme is required to pass these guidelines.</p></td>
-								<td>Pass, Medium, Fail</td>
+								<td>Pass, Fail</td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>Skip links</td>
-								<td><p>Themes&nbsp;<strong>MUST</strong>&nbsp;include a mechanism that enables users to navigate directly to content or navigation on entering any given page. These links&nbsp;<strong>MAY</strong>&nbsp;be positioned offscreen initially but&nbsp;<strong>MUST</strong>&nbsp;be available to screen reader users and&nbsp;<strong>MUST</strong>&nbsp;be visible on focus for sighted keyboard navigators.</p><p>A minimally conforming skip link&nbsp;<strong>MUST</strong>:</p><ul><li>Be the first focusable element perceived by a user via screen reader or keyboard navigation.</li><li>Be visible when keyboard focus moves to the link.</li><li>Move focus to the main content area of the page when activated.</li></ul></td>
-								<td>Pass, Medium, Fail</td>
+								<td><p>Themes MUST include a mechanism that enables users to navigate directly to content or navigation on entering any given page. These links MAY be positioned off screen initially but MUST be available to screen reader users and MUST be visible on focus for sighted keyboard navigators.</p><p>A minimally conforming skip link MUST:</p><ul><li>Be the first focusable element perceived by a user via screen reader or keyboard navigation.</li><li>Be visible when keyboard focus moves to the link.</li><li>Move focus to the main content area of the page when activated.</li></ul><p>There is an outstanding bug in WebKit-based browsers that prevents focus being moved to elements that aren’t natively focusable. You can either enqueue JS to patch this bug or assign tabindex=-1 to your main content region to handle this issue.</p></td>
+								<td>Pass, Fail</td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>Forms</td>
-								<td><p>Comment forms&nbsp;<strong>MUST</strong>&nbsp;have appropriate field labels and all content within form tags&nbsp;<strong>MUST</strong>&nbsp;be explicitly associated to a form control. Post-submission responses&nbsp;<strong>MUST</strong>&nbsp;be perceivable.</p><p>Forms that include a single input (such as a standard search form) may,&nbsp;<strong>optionally</strong>, position the input label offscreen. Themes that incorporate non-standard forms (e.g. a contact form) will be audited using the same criteria.</p><p>If you are replacing the default WordPress forms, you&nbsp;<strong>MUST not</strong>:</p><ul><li>Incorporate form controls that do not have explicitly associated <code>&lt;label&gt;</code> elements.</li><li>Create feedback mechanisms (such as via AJAX) that do not expose their responses to screen readers. Look at techniques with <a href="http://webaim.org/techniques/aria/" title="http://webaim.org/techniques/aria/">ARIA</a>&nbsp;for further information.</li></ul></td>
-								<td>Pass, Medium, Fail</td>
+								<td><p>Comment forms MUST have appropriate field labels and all content within form tags MUST be explicitly associated to a form control. Post-submission responses (errors or confirmations) MUST be perceivable. If you are using the default WordPress comment or search forms, these pass the accessibility-ready criteria.</p><p>Forms that include a single input (such as a standard search form) may, optionally, position the input label offscreen. Themes that incorporate non-standard forms (e.g. a contact form) will be audited using the same criteria.</p><p>If you are replacing the default WordPress forms or form behavior (such as to handle responses with AJAX), you MUST:</p><ul><li>Use form controls that have explicitly associated <code>&lt;label&gt;</code> elements.</li><li>Create feedback mechanisms (such as via AJAX) that expose responses to screen readers. Look at techniques with ARIA for further information.</li></ul></td>
+								<td>Pass, Fail</td>
 								<td></td>
 							</tr>
 							<tr>
-								<td>Not allowed</td>
-								<td><p>Inclusion of any of the following is NOT allowed:</p><ul><li>The&nbsp;<code>tabindex</code>&nbsp;attribute, excepting negative or zero&nbsp;<code>tabindex</code>&nbsp;in specific circumstances (assessed on a case-by-case basis).</li><li>The inclusion of the&nbsp;<code>accesskey</code>&nbsp;attribute.</li><li>Spawning new windows or tabs without warning the user.</li></ul></td>
-								<td>Pass, Medium, Fail</td>
+								<td>Images</td>
+								<td><p>Decorative images MUST be included using CSS. Where theme authors add images to template markup or provide a method for end users to add images, theme authors MUST incorporate an appropriate alt attribute or the means for an end user to provide one. During the audit, the <a href="http://dev.w3.org/html5/alt-techniques/#tree">W3C alt text decision tree</a> is used to determine whether images are using the alt attribute appropriately.</p><p><strong>Example:</strong></p><ul><li><strong>Featured Images:</strong> The alt attribute for featured images is defined in the media manager. In any case where a featured image is displayed, the alt attribute must be included with the image.</li><li><strong>Icons and icon fonts:</strong> if the icon is <strong>representing text</strong> (e.g., there is no visible text), the icon must include fallback text for screen readers that indicates what the icon means. If the icon is <strong>supplementing text</strong> (e.g., it appears with text that indicates function or purpose), then the icon should not include fallback text, and should be hidden from screen readers using <code>aria-hidden</code>.</li></ul></td>
+								<td>Pass, Fail</td>
 								<td></td>
 							</tr>
 							<tr>
-								<td>Recommended</td>
-								<td><p><strong>ARIA Landmark Roles</strong></p><p>Assign landmark roles to the main content areas of your site to enable landmark based scanning for screen readers. All content on your site must be wrapped in at least one landmark role if you use these roles. Whie using ARIA roles is optional, if they are used they must be used correctly.</p><p>Appropriate usage of roles:</p><ul><li><code>role="banner"</code> == header</li><li><code>role="main"</code> == main content</li><li><code>role="complementary"</code> = sidebars</li><li><code>role="content-info"</code> = footer</li><li><code>role="search"</code> = search form</li><li><code>role="navigation"</code> = navigation menus</li></ul><p>If a particular role appears more than once on a page, you should provide an ARIA label for that role:</p><pre><code>&lt;nav role="navigation" aria-label="&lt;?php _e( 'Primary Navigation', 'textdomain' ); ?&gt;"&gt;<br>&lt;nav role="navigation" aria-label="&lt;?php _e( 'Secondary Navigation', 'textdomain' ); ?&gt;"&gt;</code></pre><p><strong>Zoomable Text</strong></p><p>If a user zooms with text-only zoom enabled or has changed the base font-size in their browser, the site should support this without breaking the theme by creating overlapping or hidden text.</p><p><strong>Removal of <code>title</code> attributes</strong></p><p>While the <code>title</code> attribute is occasionally of value, it is never of value if the attribute’s text is the same as the visible text. This is a common issue with post titles and permalinks. Remove extraneous <code>title</code> attributes.</p></td>
-								<td>Only recommendations</td>
+								<td>Media</td>
+								<td><p>Media resources must NOT auto start or change without user action as a default configuration. This includes resources such as audio, video, or image/content sliders and carousels.</p><p>In general, media resources of this nature are likely to fall under the <a href="https://make.wordpress.org/themes/handbook/guidelines/plugin-territory/">plugin territory guidelines</a>, and will not be allowed in your theme. If you have a conforming usage, however, these rules will apply.</p></td>
+								<td>Pass, Fail</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Not Allowed</td>
+								<td><p>Inclusion of any of the following is NOT allowed:</p><ul><li>Any positive tabindex attribute. Negative or zero value tabindex is allowed in specific circumstances (assessed on a case-by-case basis).</li><li>The inclusion of the accesskey attribute.</li><li>Spawning new windows or tabs without warning the user.</li></ul></td>
+								<td>Pass, Fail</td>
 								<td></td>
 							</tr>
 						</tbody>
 					</table>
 
+					<h2>Recommended</h2>
+					<h3>ARIA Landmark Roles</h3>
+					<p>Assign landmark roles to the main content areas of your site to enable landmark based scanning for screen readers. All content on your site must be wrapped in at least one landmark role if you use these roles. Whie using ARIA roles is optional, if they are used they must be used correctly.</p>
+					<p>Appropriate usage of roles:</p>
+					<ul>
+						<li><code>role="banner"</code> == header</li>
+						<li><code>role="main"</code> == main content</li>
+						<li><code>role="complementary"</code> = sidebars</li>
+						<li><code>role="content-info"</code> = footer</li>
+						<li><code>role="search"</code> = search form</li>
+						<li><code>role="navigation"</code> = navigation menus</li>
+					</ul>
+					<p>If a particular role appears more than once on a page, you should provide an ARIA label for that role:</p>
+					<pre><code>&lt;nav role="navigation" aria-label="&lt;?php _e( 'Primary Navigation', 'textdomain' ); ?&gt;"&gt;<br>&lt;nav role="navigation" aria-label="&lt;?php _e( 'Secondary Navigation', 'textdomain' ); ?&gt;"&gt;
+					</code></pre>
+					<h3>Zoomable Text</h3>
+					<p>If a user zooms with text-only zoom enabled or has changed the base font-size in their browser, the site should support this without breaking the theme by creating overlapping or hidden text.</p>
+					<h3>Removal of <code>title</code> attributes</h3>
+					<p>While the <code>title</code> attribute is occasionally of value, it is never of value if the attribute’s text is the same as the visible text. This is a common issue with post titles and permalinks. Remove extraneous <code>title</code> attributes.</p>
 				</div>
 			</div>
 		</div>
